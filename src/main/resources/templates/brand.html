@@ -1,0 +1,17 @@
+{#include main}
+    {#title}{brand.name}{/title}
+    <h2>{brand.name}</h2>
+    <section>
+        {#if drinks.size > 0}
+            <ul>
+                {#for drink in drinks}
+                    <li>
+                        <a href="/drink/{drink.id}">{drink.name}</a>
+                    </li>
+                {/for}
+            </ul>
+        {#else}
+            <p class="no-drinks">{msg:drinks_no_drinks}</p>
+        {/if}
+    </section>
+{/include}

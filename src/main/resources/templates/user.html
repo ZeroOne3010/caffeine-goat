@@ -1,0 +1,23 @@
+{#include main}
+    {#title}{msg:users_title}{/title}
+    <h2>{user.name}</h2>
+    {#if reviews.size > 0}
+        {#for review in reviews}
+            <section>
+                <h3>{review.drink.brand.name} {review.drink.name}</h3>
+                <p>
+                    <meter value="{review.rating}" min="0" low="2" high="4" max="5" optimum="5">
+                        {review.rating}/5
+                    </meter> {review.rating}/5
+                    stars<br/>
+                <blockquote>
+                    {review.comment}
+                    <cite>{review.reviewer.name} / {review.createdAt.toLocalDate()}</cite>
+                </blockquote>
+                </p>
+            </section>
+        {/for}
+    {#else}
+        <p>No reviews.</p>
+    {/if}
+{/include}

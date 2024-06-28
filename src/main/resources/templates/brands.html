@@ -1,0 +1,15 @@
+{#include main}
+    {#title}{msg:brands_title}{/title}
+    <h2>{msg:brands_title}</h2>
+    {#if brands.size > 0}
+        {#for brand in brands}
+            <section>
+                <h3>
+                    <a href="/brand/{brand.id}">{brand.name}</a>
+                </h3>
+            </section>
+        {/for}
+    {#else}
+        <p class="no-brands">{msg:brands_no_brands}</p>
+    {/if}
+{/include}

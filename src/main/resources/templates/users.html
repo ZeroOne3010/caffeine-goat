@@ -1,0 +1,15 @@
+{#include main}
+    {#title}{msg:users_title}{/title}
+    <h2>{msg:users_title}</h2>
+    {#if users.size > 0}
+        {#for user in users}
+            <section>
+                <h3>
+                    <a href="/user/{user.id}">{user.name}</a>
+                </h3>
+            </section>
+        {/for}
+    {#else}
+        <p class="no-users">{msg:users_no_users}</p>
+    {/if}
+{/include}

@@ -1,0 +1,18 @@
+{#include main}
+    {#title}{msg:drinks_title}{/title}
+    <h2>{msg:drinks_title}</h2>
+    {#if drinks.size > 0}
+        {#for drink in drinks}
+            <section>
+                <h3>
+                    <a href="/drink/{drink.id}">{drink.brand.name} {drink.name}</a>
+                </h3>
+                <p>
+                    {msg:drinks_caffeine}: {drink.caffeineContentMgPer100ml} mg/100 ml
+                </p>
+            </section>
+        {/for}
+    {#else}
+        <p class="no-drinks">{msg:drinks_no_drinks}</p>
+    {/if}
+{/include}

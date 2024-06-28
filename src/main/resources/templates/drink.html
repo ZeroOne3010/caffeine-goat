@@ -1,0 +1,12 @@
+{#include main}
+    {#title}{msg:drinks_title}{/title}
+    <h2>{drink.brand.name} {drink.name}</h2>
+    <section>
+        <h3>
+            <a href="/brand/{drink.brand.id}">{drink.brand.name}</a> {drink.name}
+        </h3>
+        <p>
+            {msg:drinks_caffeine}: {drink.caffeineContentMgPer100ml} mg/100 ml
+        </p>
+    </section>
+{/include}
