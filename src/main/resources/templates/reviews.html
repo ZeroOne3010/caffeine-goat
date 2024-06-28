@@ -1,5 +1,6 @@
 {#include main}
     {#title}{msg:reviews_title}{/title}
+    {#fragment id=reviews}
     <h2>{msg:latest_reviews}</h2>
     {#if reviews.size > 0}
         {#for review in reviews}
@@ -11,7 +12,7 @@
                     </meter> {review.rating}/5
                     stars<br/>
                 <blockquote>
-                    {review.comment}
+                    {review.comment}<br/>
                     <cite>{review.reviewer.name} / {review.createdAt.toLocalDate()}</cite>
                 </blockquote>
                 </p>
@@ -20,4 +21,5 @@
     {#else}
         <p>No reviews.</p>
     {/if}
+    {/fragment}
 {/include}

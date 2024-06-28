@@ -28,8 +28,9 @@ class BrandResource {
     @GET
     @Transactional
     @Produces(MediaType.TEXT_HTML)
-    fun listAllAsHtml(): String {
-        return brands.data("brands", Brand.listAll(Sort.by("name"))).render()
+    fun listAllAsHtml(@HeaderParam("hx-fragment") isFragment: Boolean): String {
+        val template = if (isFragment) brands.getFragment("brands") else brands
+        return template.data("brands", Brand.listAll(Sort.by("name"))).render()
     }
 
     @POST

@@ -1,7 +1,14 @@
 {#include main}
     {#title}{/title}
     <h2>Welcome to Caffeine Goat!</h2>
-    <section>
-        Please select something from above.
-    </section>
+    <div id="home">
+        <section>
+            <div hx-get="/brand" hx-trigger="load" hx-swap="outerHTML" hx-headers='{"Accept": "text/html", "hx-fragment": "true"}'>
+            </div>
+        </section>
+        <section>
+            <div hx-get="/review" hx-trigger="load" hx-swap="outerHTML" hx-headers='{"Accept": "text/html", "hx-fragment": "true"}'>
+            </div>
+        </section>
+    </div>
 {/include}

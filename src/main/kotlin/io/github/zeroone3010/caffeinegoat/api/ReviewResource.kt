@@ -26,8 +26,9 @@ class ReviewResource {
     @GET
     @Transactional
     @Produces(MediaType.TEXT_HTML)
-    fun listLatestAsHtml(): String {
-        return reviews.data("reviews", Review.newestPaged(0, 5)).render()
+    fun listLatestAsHtml(@HeaderParam("hx-fragment") isFragment: Boolean): String {
+        val template = if (isFragment) reviews.getFragment("reviews") else reviews
+        return template.data("reviews", Review.newestPaged(0, 5)).render()
     }
 
     @POST

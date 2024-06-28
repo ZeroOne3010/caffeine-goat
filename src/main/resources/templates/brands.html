@@ -1,5 +1,6 @@
 {#include main}
     {#title}{msg:brands_title}{/title}
+    {#fragment id=brands}
     <h2>{msg:brands_title}</h2>
     {#if brands.size > 0}
         {#for brand in brands}
@@ -12,4 +13,5 @@
     {#else}
         <p class="no-brands">{msg:brands_no_brands}</p>
     {/if}
+    {/fragment}
 {/include}

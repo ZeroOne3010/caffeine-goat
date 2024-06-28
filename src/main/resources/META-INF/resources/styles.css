@@ -25,6 +25,13 @@ section {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
+#home {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 0px;
+}
+
 h3 {
     color: #333;
     margin-bottom: 5px;
@@ -64,4 +71,3 @@ nav ul li a:hover {
     color: #cc0000;
     font-size: 1.2em;
 }
-
