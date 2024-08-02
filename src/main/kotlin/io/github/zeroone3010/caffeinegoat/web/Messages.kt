@@ -25,6 +25,9 @@ interface Messages {
     fun reviews_title(): String
 
     @Message
+    fun post_review(): String
+
+    @Message
     fun latest_reviews(): String
 
     // USERS
@@ -42,4 +45,34 @@ interface Messages {
 
     @Message
     fun brands_no_brands(): String
+
+    @Message
+    fun login_signup(): String
+
+    @Message
+    fun login(): String
+
+    @Message
+    fun logout(): String
+
+    @Message
+    fun email(): String
+
+    @Message
+    fun username(): String
+
+    @Message
+    fun login_code(): String
+
+    @Message
+    fun confirm(): String
+
+    @Message
+    fun we_have_sent_you_an_email_with_a_login_code(): String
+
+    @Message
+    fun setup_username(): String
+
+    @Message
+    fun setup_username_info(): String
 }

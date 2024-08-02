@@ -1,0 +1,9 @@
+{#include main}
+    {#title}{msg:setup_username}{/title}
+    <h2>{msg:setup_username}</h2>
+    <p>{msg:setup_username_info}</p>
+    <form action="/login/setupUsername" method="post">
+        <input type="username" name="username" placeholder="{msg:username}" required autofocus/>
+        <button type="submit">{msg:confirm}</button>
+    </form>
+{/include}

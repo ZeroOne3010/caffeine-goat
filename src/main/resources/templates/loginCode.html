@@ -1,0 +1,10 @@
+{#include main}
+    {#title}{msg:login}{/title}
+    <h2>{msg:login}</h2>
+    <form action="/login/code" method="post">
+        <p>{msg:we_have_sent_you_an_email_with_a_login_code}</p>
+        <input type="hidden" name="userId" value="{userId}"/>
+        <input type="text" name="code" placeholder="{msg:login_code}" required autofocus/>
+        <button type="submit">{msg:confirm}</button>
+    </form>
+{/include}

@@ -1,0 +1,8 @@
+{#include main}
+    {#title}{msg:login}{/title}
+    <h2>{msg:login}</h2>
+    <form action="/login/init" method="post">
+        <input type="email" name="email" placeholder="{msg:email}" required autofocus/>
+        <button type="submit">{msg:login}</button>
+    </form>
+{/include}
