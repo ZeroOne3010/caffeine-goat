@@ -6,7 +6,7 @@ data class ReviewDto(
     val id: Long?,
     val drinkId: Long,
     val reviewerId: Long,
-    val rating: Int,
+    val rating: Float,
     val comment: String?
 ) {
 

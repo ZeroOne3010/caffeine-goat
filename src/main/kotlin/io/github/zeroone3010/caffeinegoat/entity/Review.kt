@@ -21,7 +21,7 @@ class Review : PanacheEntity() {
     var reviewer: User = User()
 
     @Column(nullable = false)
-    var rating: Int = 0
+    var rating: Float = 0f
 
     @Column(length = 2048)
     var comment: String? = null
